@@ -1,7 +1,7 @@
 {self,  pkgs ? import <nixpkgs> {} }:
 with pkgs;
 let
-  nvim_hs = pkgs.neovim.override {
+  neovim = pkgs.neovim.override {
     withPython3 = false;
     withRuby = false;
     configure = {
@@ -39,12 +39,12 @@ let
 in
   mkShell {
     packages = [
-      nvim_hs
+      neovim
       tree-sitter
       nodejs
-      haskell-language-server
 
       ghc
       cabal-install
+      haskell-language-server
     ];
   }
