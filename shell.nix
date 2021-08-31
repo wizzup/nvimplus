@@ -27,13 +27,10 @@ let
         lsp_signature-nvim
         nvim-compe
         nvim-tree-lua
-        toggleterm-nvim
 
-        haskell-vim
         gruvbox
         lualine-nvim
         vim-commentary
-        hop-nvim
       ];
       opt = [ ];
       };

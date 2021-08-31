@@ -22,13 +22,8 @@ vim.g.mapleader = ','
 vim.api.nvim_set_keymap('n', '<Leader><Space>', ':nohlsearch<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true })
 
--- highlight is extremely slow, disable for a moment
--- require'nvim-treesitter.configs'.setup {
---   highlight = {
---     enable = false,
---     -- additional_vim_regex_highlighting = false,
---   },
--- }
+-- treesitter
+require'nvim-treesitter.configs'.setup {}
 
 -- lsp-config
 require'lspconfig'.hls.setup{}
@@ -49,12 +44,5 @@ require'compe'.setup {
   };
 }
 
--- toggleterm
-require("toggleterm").setup{}
-
 -- lualine
 require('lualine').setup()
-
--- hop
-require('hop').setup()
-vim.api.nvim_set_keymap('n', '<Leader>h', ':HopLineStart<CR>', { noremap = true })
