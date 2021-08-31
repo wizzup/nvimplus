@@ -26,7 +26,7 @@ vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true })
 require'nvim-treesitter.configs'.setup {}
 
 -- lsp-config
-require'lspconfig'.hls.setup{}
+require'lspconfig'.pyright.setup{}
 
 -- lsp_signature
 require "lsp_signature".setup()
