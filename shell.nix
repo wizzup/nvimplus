@@ -43,8 +43,8 @@ in
       tree-sitter
       nodejs
 
-      ghc
-      cabal-install
-      haskell-language-server
+      cargo
+      rustc
+      rust-analyzer
     ];
   }

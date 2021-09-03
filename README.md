@@ -1,7 +1,7 @@
 # Neovim + LSP + Tools
 
-neovim with haskell-language-server
+neovim with rustc, cargo and rust-analyzer
 
 ### usage:
 
-    $ nix develop github:wizzup/nvimplus/haskell
+    $ nix develop github:wizzup/nvimplus/rust
