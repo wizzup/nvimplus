@@ -1,5 +1,4 @@
-{self,  pkgs ? import <nixpkgs> {} }:
-with pkgs;
+{self,  pkgs}:
 let
   neovim = pkgs.neovim.override {
     withPython3 = false;
@@ -37,14 +36,15 @@ let
     };
   };
 in
-  mkShell {
-    packages = [
+  pkgs.mkShell {
+    packages = with pkgs; [
       neovim
       tree-sitter
       nodejs
 
       cargo
       rustc
+      clippy
       rust-analyzer
     ];
   }

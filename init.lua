@@ -23,7 +23,17 @@ vim.api.nvim_set_keymap('n', '<Leader><Space>', ':nohlsearch<CR>', { noremap = t
 vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true })
 
 -- treesitter
-require'nvim-treesitter.configs'.setup {}
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+  },
+  indent = {
+    enable = true,
+  },
+}
+
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- lsp-config
 require'lspconfig'.rust_analyzer.setup{}
@@ -34,14 +44,14 @@ require "lsp_signature".setup()
 -- nvim-compe
 vim.o.completeopt = "menuone,noselect"
 require'compe'.setup {
-  enabled = true;
-  autocomplete = true;
+  enabled = true,
+  autocomplete = true,
   source = {
-    path = true;
-    nvim_lsp = true;
-    buffer = true;
-    nvim_lua = true;
-  };
+    path = true,
+    nvim_lsp = true,
+    buffer = true,
+    nvim_lua = true,
+  },
 }
 
 -- lualine
