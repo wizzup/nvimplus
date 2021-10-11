@@ -46,5 +46,6 @@ in
       rustc
       clippy
       rust-analyzer
+      rustfmt
     ];
   }

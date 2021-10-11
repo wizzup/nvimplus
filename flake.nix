@@ -1,6 +1,6 @@
 {
-  description = "neovim configured with language server";
-  nixConfig.bash-prompt = "\\W🦀 ";
+  description = "neovim configured with language server (rust)";
+  nixConfig.bash-prompt = "\\W[rs] ";
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
