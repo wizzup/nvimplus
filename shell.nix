@@ -40,11 +40,19 @@ in
   mkShell {
     packages = [
       neovim
+
+      # for telescope-nvim
+      ripgrep
+      fd
+
+      # for tree-sitter
       tree-sitter
+      stdenv.cc.cc.lib
       nodejs
 
       ghc
       cabal-install
+      hpack
       haskell-language-server
     ];
   }
