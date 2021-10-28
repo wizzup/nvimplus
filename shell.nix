@@ -45,5 +45,7 @@ in
 
       python3
       pyright
+      python3Packages.pylint
+      python3Packages.pytest
     ];
   }
