@@ -13,6 +13,8 @@ vim.wo.wrap = false
 
 vim.bo.infercase = true
 vim.bo.expandtab = true
+vim.bo.tabstop = 8
+vim.bo.softtabstop = 4
 vim.bo.shiftwidth = 2
 
 vim.cmd('colorscheme gruvbox')
