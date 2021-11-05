@@ -2,7 +2,6 @@
 with pkgs;
 let
   neovim = pkgs.neovim.override {
-    withPython3 = false;
     withRuby = false;
     configure = {
       customRC = ''
@@ -20,19 +19,19 @@ let
       '';
       packages.myVimPackage = with pkgs.vimPlugins; {
       # youtube.com/watch?v=P9jB7mz2Ax4
-      start = [
-        telescope-nvim
-        nvim-treesitter
-        nvim-lspconfig
-        lsp_signature-nvim
-        nvim-compe
-        nvim-tree-lua
+        start = [
+          gruvbox
+          lsp_signature-nvim
+          lualine-nvim
+          nvim-compe
+          nvim-lspconfig
+          nvim-tree-lua
+          nvim-treesitter
+          telescope-nvim
+          vim-commentary
 
-        gruvbox
-        lualine-nvim
-        vim-commentary
-      ];
-      opt = [ ];
+          nim-vim
+        ];
       };
     };
   };
@@ -40,12 +39,17 @@ in
   mkShell {
     packages = [
       neovim
+
+       # for telescope-nvim
+      ripgrep
+      fd
+
+      # for tree-sitter
       tree-sitter
       nodejs
+      gcc
 
-      python3
-      pyright
-      python3Packages.pylint
-      python3Packages.pytest
+      nim
+      nimlsp
     ];
   }

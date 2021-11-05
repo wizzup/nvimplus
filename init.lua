@@ -22,11 +22,8 @@ vim.g.mapleader = ','
 vim.api.nvim_set_keymap('n', '<Leader><Space>', ':nohlsearch<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>w', ':w<CR>', { noremap = true })
 
--- treesitter
-require'nvim-treesitter.configs'.setup {}
-
 -- lsp-config
-require'lspconfig'.pyright.setup{}
+require'lspconfig'.nimls.setup{}
 
 -- lsp_signature
 require "lsp_signature".setup()

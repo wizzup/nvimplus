@@ -1,6 +1,6 @@
 {
   description = "neovim configured with haskell language server";
-  nixConfig.bash-prompt = "\\W[py] ";
+  nixConfig.bash-prompt = "\\W[nm] ";
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
