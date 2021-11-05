@@ -39,8 +39,15 @@ in
   pkgs.mkShell {
     packages = with pkgs; [
       neovim
+
+      # for telescope-nvim
+      ripgrep
+      fd
+
+      # for tree-sitter
       tree-sitter
       nodejs
+      gcc
 
       cargo
       rustc
